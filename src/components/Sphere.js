@@ -13,10 +13,12 @@ class Sphere extends React.Component {
   }
 
   handleChange(event) {
-    const r = event.target.value;
+    const radius = event.target.value;
+    const volume = this.computeVolume(radius);
+
     this.setState({
-      radius: r,
-      volume: this.computeVolume(r)
+      radius: radius,
+      volume: volume
     });
   }
 
