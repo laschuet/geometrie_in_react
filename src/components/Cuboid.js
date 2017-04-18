@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from 'stylesheets/components/common/typography';
 
-const Quader = () => (
+const Cuboid = () => (
   <div>
     <h1 className={styles.heading}>Quader</h1>
     <div>
@@ -30,4 +30,4 @@ const Quader = () => (
   </div>
 );
 
-export default Quader;
+export default Cuboid;

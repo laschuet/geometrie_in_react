@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from 'stylesheets/components/common/typography';
 
-const Rechteck = () => (
+const Rectangle = () => (
   <div>
     <h1 className={styles.heading}>Rechteck</h1>
     <div>
@@ -25,4 +25,4 @@ const Rechteck = () => (
   </div>
 );
 
-export default Rechteck;
+export default Rectangle;

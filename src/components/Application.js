@@ -2,9 +2,9 @@ import React from 'react';
 import { Link, Route } from 'react-router-dom';
 
 import Home from 'components/Home';
-import Rechteck from 'components/Rechteck';
-import Quader from 'components/Quader';
-import Kugel from 'components/Kugel';
+import Rectangle from 'components/Rectangle';
+import Cuboid from 'components/Cuboid';
+import Sphere from 'components/Sphere';
 import styles from 'stylesheets/components/application';
 
 const Application = () => (
@@ -17,9 +17,9 @@ const Application = () => (
     </ul>
     <main>
       <Route exact path="/" component={Home} />
-      <Route exact path="/rechteck" component={Rechteck} />
-      <Route exact path="/quader" component={Quader} />
-      <Route exact path="/kugel" component={Kugel} />
+      <Route exact path="/rechteck" component={Rectangle} />
+      <Route exact path="/quader" component={Cuboid} />
+      <Route exact path="/kugel" component={Sphere} />
     </main>
   </div>
 );

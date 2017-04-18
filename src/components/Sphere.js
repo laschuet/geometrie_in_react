@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from 'stylesheets/components/common/typography';
 
-class Kugel extends React.Component {
+class Sphere extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -48,4 +48,4 @@ class Kugel extends React.Component {
   };
 }
 
-export default Kugel;
+export default Sphere;
