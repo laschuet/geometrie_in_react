@@ -31,7 +31,7 @@ class Kugel extends React.Component {
         <div>
           <h2>Eingabe</h2>
           <form>
-            <label id="kugel_r">r:
+            <label>r:
               <input
                 type="text"
                 value={this.state.radius}
