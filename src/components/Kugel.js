@@ -7,7 +7,7 @@ class Kugel extends React.Component {
     super(props);
     this.state = {
       radius: 0,
-      volumen: 0
+      volume: 0
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -16,7 +16,7 @@ class Kugel extends React.Component {
     const r = event.target.value;
     this.setState({
       radius: r,
-      volumen: this.computeVolume(r)
+      volume: this.computeVolume(r)
     });
   }
 
@@ -41,7 +41,7 @@ class Kugel extends React.Component {
             </label>
           </form>
           <h2>Volumen</h2>
-          <span>{this.state.volumen}</span>
+          <span>{this.state.volume}</span>
         </div>
       </div>
     );
