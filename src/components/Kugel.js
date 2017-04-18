@@ -16,11 +16,11 @@ class Kugel extends React.Component {
     const r = event.target.value;
     this.setState({
       radius: r,
-      volumen: this.volumen(r)
+      volumen: this.computeVolume(r)
     });
   }
 
-  volumen(radius) {
+  computeVolume(radius) {
     return 4 / 3 * Math.PI * Math.pow(radius, 2);
   }
 
