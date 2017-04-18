@@ -34,6 +34,7 @@ class Kugel extends React.Component {
             <label>r:
               <input
                 type="text"
+                name="radius"
                 value={this.state.radius}
                 onChange={this.handleChange}
               />
