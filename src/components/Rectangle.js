@@ -22,7 +22,7 @@ class Rectangle extends React.Component {
         this.computeArea(this.state.edgeA, value);
 
     this.setState({
-      [event.target.name]: value,
+      [name]: value,
       area: area
     });
   }
