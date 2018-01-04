@@ -10,7 +10,9 @@
     "lint": "eslint src",
     "dist": "node dist.js"
   },
-  "keywords": ["react"],
+  "keywords": [
+    "react"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/laschuet/geometrie-in-react.git"
