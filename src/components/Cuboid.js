@@ -5,12 +5,14 @@ import styles from '../stylesheets/components/common/typography';
 class Cuboid extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       edgeA: 0,
       edgeB: 0,
       edgeC: 0,
       volume: 0
     };
+
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -27,16 +29,12 @@ class Cuboid extends React.Component {
     } else {
       edgeC = value;
     }
-    const volume = this.computeVolume(edgeA, edgeB, edgeC);
+    const volume = edgeA * edgeB * edgeC;
 
     this.setState({
       [name]: value,
       volume: volume
     });
-  }
-
-  computeVolume(edgeA, edgeB, edgeC) {
-    return edgeA * edgeB * edgeC;
   }
 
   render() {
@@ -47,7 +45,8 @@ class Cuboid extends React.Component {
           <h2>Eingabe</h2>
           <form>
             <div>
-              <label>Seite a:
+              <label>
+                Seite a:
                 <input
                   type="text"
                   name="edgeA"
@@ -57,7 +56,8 @@ class Cuboid extends React.Component {
               </label>
             </div>
             <div>
-              <label>Seite b:
+              <label>
+                Seite b:
                 <input
                   type="text"
                   name="edgeB"
@@ -67,7 +67,8 @@ class Cuboid extends React.Component {
               </label>
             </div>
             <div>
-              <label>Seite c:
+              <label>
+                Seite c:
                 <input
                   type="text"
                   name="edgeC"

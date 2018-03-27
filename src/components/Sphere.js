@@ -5,25 +5,23 @@ import styles from '../stylesheets/components/common/typography';
 class Sphere extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       radius: 0,
       volume: 0
     };
+
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(event) {
     const radius = event.target.value;
-    const volume = this.computeVolume(radius);
+    const volume = 4 / 3 * Math.PI * radius * radius;
 
     this.setState({
       radius: radius,
       volume: volume
     });
-  }
-
-  computeVolume(radius) {
-    return 4 / 3 * Math.PI * Math.pow(radius, 2);
   }
 
   render() {
@@ -33,7 +31,8 @@ class Sphere extends React.Component {
         <div>
           <h2>Eingabe</h2>
           <form>
-            <label>r:
+            <label>
+              r:
               <input
                 type="text"
                 name="radius"

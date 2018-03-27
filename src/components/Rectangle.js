@@ -5,11 +5,13 @@ import styles from '../stylesheets/components/common/typography';
 class Rectangle extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       edgeA: 0,
       edgeB: 0,
       area: 0
     };
+
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -17,18 +19,12 @@ class Rectangle extends React.Component {
     const name = event.target.name;
     const value = event.target.value;
     const area =
-        name === 'edgeA' ?
-        this.computeArea(value, this.state.edgeB):
-        this.computeArea(this.state.edgeA, value);
+        name === 'edgeA' ? value * this.state.edgeB : this.state.edgeA * value;
 
     this.setState({
       [name]: value,
       area: area
     });
-  }
-
-  computeArea(edgeA, edgeB) {
-    return edgeA * edgeB;
   }
 
   render() {
@@ -39,7 +35,8 @@ class Rectangle extends React.Component {
           <h2>Eingabe</h2>
           <form>
             <div>
-              <label>Seite a:
+              <label>
+                Seite a:
                 <input
                   type="text"
                   name="edgeA"
@@ -49,7 +46,8 @@ class Rectangle extends React.Component {
               </label>
             </div>
             <div>
-              <label>Seite b:
+              <label>
+                Seite b:
                 <input
                   type="text"
                   name="edgeB"
