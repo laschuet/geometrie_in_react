@@ -1,13 +1,14 @@
 import createHistory from 'history/createBrowserHistory';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
-import { routerMiddleware, routerReducer } from 'react-router-redux';
-import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
+import { ConnectedRouter, routerMiddleware } from 'react-router-redux';
+import { applyMiddleware, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
 
-import Root from 'components/Root';
-import reducer from 'reducers/index';
+import Application from './components/Application';
+import reducer from './reducers/index';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const history = createHistory();
@@ -21,15 +22,20 @@ const domElement = document.getElementById('react');
 const render = () => {
   ReactDOM.render(
     <AppContainer>
-      <Root history={history} store={store} />
+      <Provider store={store}>
+        <ConnectedRouter history={history}>
+          <Application />
+        </ConnectedRouter>
+      </Provider>
     </AppContainer>,
     domElement
   );
 };
 
 render();
+
 if (module.hot) {
-  module.hot.accept('components/Root', () => {
+  module.hot.accept('./components/Application', () => {
     render();
   });
 }

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
 
-import Home from 'components/Home';
-import Rectangle from 'components/Rectangle';
-import Cuboid from 'components/Cuboid';
-import Sphere from 'components/Sphere';
-import styles from 'stylesheets/components/application';
+import styles from '../stylesheets/components/application';
+import Home from './Home';
+import Rectangle from './Rectangle';
+import Cuboid from './Cuboid';
+import Sphere from './Sphere';
 
 const Application = () => (
   <div className={styles.root}>

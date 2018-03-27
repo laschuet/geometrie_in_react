@@ -1,14 +1,19 @@
 {
-  "ecmaFeatures": {
-    "jsx": true,
-    "modules": true
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 6,
+    "sourceType": "module"
   },
   "env": {
     "browser": true,
+    "es6": true,
     "node": true
   },
-  "extends": "eslint:recommended",
   "parser": "babel-eslint",
+  "plugins": ["react"],
   "rules": {
     "accessor-pairs": 0,
     "arrow-parens": [2, "as-needed"],
@@ -41,8 +46,5 @@
     "strict": [2, "never"],
     "valid-jsdoc": 2,
     "vars-on-top": 0
-  },
-  "plugins": [
-    "react"
-  ]
+  }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from 'stylesheets/components/common/typography';
+import styles from '../stylesheets/components/common/typography';
 
 class Cuboid extends React.Component {
   constructor(props) {

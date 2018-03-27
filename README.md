@@ -20,22 +20,22 @@ typischen Eigenschaften einfacher geometrischer Figuren in React.
 ```
 npm install
 ```
-Installiert alle Abhängigkeiten.
+Installiere alle Abhängigkeiten.
 
 ```
 npm run dev
 ```
-Startet die Anwendung im Entwicklungsmodus.
+Starte die Anwendung im Entwicklungsmodus.
 
 ```
 npm run lint
 ```
-Prüft den Quellcode.
+Prüfe den Quellcode.
 
 ```
 npm run dist
 ```
-Stellt die Webanwendung für die Distribution zusammen.
+Stell die Webanwendung für die Distribution zusammen.
 
 ## License
 

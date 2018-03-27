@@ -1,14 +1,18 @@
 {
   "presets": [
-    ["es2015", {"modules": false}],
-    "react",
-    "stage-2"
+    ["@babel/env", {
+      "targets": {
+        "browsers": [
+          "last 2 versions",
+          "safari > 8",
+          "not ie < 11"
+        ]
+      },
+      "modules": false,
+      "useBuiltIns": "usage"
+    }],
+    "@babel/react",
+    "@babel/stage-2"
   ],
-  "env": {
-    "development": {
-      "plugins": [
-        "react-hot-loader/babel"
-      ]
-    }
-  }
+  "plugins": ["react-hot-loader/babel"]
 }

@@ -1,10 +1,12 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
 
-var config = require('./webpack.dist.config');
+const config = require('./webpack.dist.config');
 
 process.env.NODE_ENV = 'production';
-var compiler = webpack(config);
-compiler.run(function (err, stats) {
-  console.log('Webpack is building...please wait...');
+const compiler = webpack(config);
+compiler.run((err, stats) => {
+  /* eslint-disable no-console */
+  console.log('webpack building...');
   console.log(stats.toString({ colors: true }));
+  /* eslint-enable */
 });
